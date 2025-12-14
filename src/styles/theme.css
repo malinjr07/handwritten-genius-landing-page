@@ -250,6 +250,12 @@
 	--color-stone-950: oklch(14.7% 0.004 49.25);
 	--color-black: #000;
 	--color-white: #fff;
+	--color-bg-0: oklch(89.5% 0.017 225.5);
+	--color-bg-1: oklch(89.5% 0.035 209.5);
+	--color-bg-2: oklch(95.1% 0.023 224.1);
+	--color-theme-1: oklch(63.7% 0.25 25.3);
+	--color-theme-2: oklch(42.4% 0.15 230.7);
+	--color-text: oklch(0 0 0 / 0.7);
 	--spacing: 0.25rem;
 	--breakpoint-sm: 40rem;
 	--breakpoint-md: 48rem;

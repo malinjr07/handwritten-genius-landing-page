@@ -1,38 +1,77 @@
-# sv
+# Handwritten Genius
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A modern web application built with SvelteKit and Tailwind CSS.
 
-## Creating a project
+## Project Structure
 
-If you're seeing this, you've probably already done this step. Congrats!
+### Source Directory (`/src`)
+
+- `app.d.ts` - TypeScript type definitions
+- `app.html` - Main HTML template
+
+### Library (`/src/lib`)
+
+- `components/` - Reusable UI components
+  - `common/` - Common UI components (aliased as `@common`)
+  - `core/` - Core UI components (aliased as `@core`)
+  - `svg/` - SVG components (aliased as `@svg`)
+- `images/` - Image assets
+- `utils/` - Utility functions and helpers
+  - `services/` - API and service integrations (aliased as `@services`)
+  - `store/` - Application state management (aliased as `@store`)
+  - `types/` - TypeScript type definitions (aliased as `@types`)
+
+### Routes (`/src/routes`)
+
+- `+layout.svelte` - Root layout component
+- `+layout.ts` - Root layout logic
+- `+page.svelte` - Home page component
+- `defaults/` - Default route components
+
+## Import Aliases
+
+The project uses the following import aliases defined in `svelte.config.js`:
+
+| Alias       | Path                        | Description                  |
+| ----------- | --------------------------- | ---------------------------- |
+| `@common`   | `src/lib/components/common` | Common UI components         |
+| `@core`     | `src/lib/components/core`   | Core UI components           |
+| `@svg`      | `src/lib/components/svg`    | SVG components               |
+| `@services` | `src/lib/utils/services`    | API and service integrations |
+| `@store`    | `src/lib/utils/store`       | Application state management |
+| `@types`    | `src/lib/utils/types`       | TypeScript type definitions  |
+
+## Development
+
+### Prerequisites
+
+- Node.js
+- Yarn
+
+### Setup
 
 ```sh
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+yarn install
 ```
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+### Running the development server
 
 ```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+yarn dev
 ```
 
-## Building
-
-To create a production version of your app:
+### Building for production
 
 ```sh
-npm run build
+yarn build
 ```
 
-You can preview the production build with `npm run preview`.
+### Previewing production build
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+```sh
+yarn preview
+```
+
+## Styling
+
+This project uses [Tailwind CSS](https://tailwindcss.com/) for styling. All custom styles should be added to the appropriate component using Tailwind's utility classes.
