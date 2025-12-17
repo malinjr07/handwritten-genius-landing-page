@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
+	import LogoDotSvg from '@svg/LogoDotSvg.svelte';
 
 	let isSticky = $state(false);
 	let openDropdown = $state<string | null>(null);
@@ -122,7 +123,7 @@
 	>
 		<a href="/" class="flex items-center" title="Handwrytten">
 			<div class="logo-dot absolute left-0 top-0 w-14 h-14">
-				<img src="/logo-dot.svg" alt="Handwrytten" class="w-full h-full" />
+				<LogoDotSvg class="w-full h-full" />
 			</div>
 			<svg class="logo-h1 absolute" style="width: 5px; height: 29px; left: 20px; top: 12px;">
 				<defs>

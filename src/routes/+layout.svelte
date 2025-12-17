@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Header from '@core/Header.svelte';
+	import Footer from '@core/Footer.svelte';
 	import '../styles/layout.css';
 
 	let { children } = $props();
@@ -23,14 +24,9 @@
 
 	<Header />
 
-	<main class="flex-1 flex flex-col p-4 w-full max-w-4xl mx-auto box-border">
+	<main class="flex-1">
 		{@render children()}
 	</main>
 
-	<footer class="flex flex-col justify-center items-center p-3 md:p-0">
-		<p>
-			visit <a href="https://svelte.dev/docs/kit" class="font-bold">svelte.dev/docs/kit</a> to learn about
-			SvelteKit
-		</p>
-	</footer>
+	<Footer />
 </div>
